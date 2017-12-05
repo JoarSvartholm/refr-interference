@@ -17,10 +17,11 @@
 
 % Add new commands used-defined:
 \newcommand{\m}[1]{\mathbf{#1}}
+\newcommand{\tn}[1]{\textnormal{#1}}
 
 
 % instälningar för figurtexter
-\usepackage[margin=3ex,font=small,labelfont=bf,labelsep=endash]{caption}
+\usepackage[margin=3ex,font=it,labelfont=bf,labelsep=endash]{caption}
 
 % mailadresser som hyperlänkar
 \newcommand{\mail}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
@@ -40,7 +41,7 @@
 
 
 
-\graphicspath{{./images/}} % Söker också bilder i en undermapp figs.
+\graphicspath{{./images/},{./matlab}} % Söker också bilder i en undermapp figs.
 
 
 %% DOCUMENT
