@@ -1,0 +1,113 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}            % Tekenkodning
+\usepackage[T1]{fontenc}               % Fixa kopiering av texten
+\usepackage[english]{babel}            % Språk (t.ex. Innehåll)
+\usepackage{geometry}                  % Sidlayout m.m.
+\usepackage{graphicx,epstopdf,float}   % Bilder
+\usepackage{amsmath,amssymb,amsfonts}  % Matematik
+\usepackage{enumerate}                 % Fler typer av listor
+\usepackage{fancyhdr}                  % Sidhuvud/sidfot
+\usepackage{hyperref}                  % Hyperlänkar
+\usepackage{parskip}                   % noindent!!
+\usepackage{float}                     % \begin{figure}[H] preciserar bildposition
+\usepackage{subcaption}             % För att lägga figurer bredvidvarandra från: http://tex.stackexchange.com/questions/91224/placing-two-figures-side-by-side
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{wrapfig}
+
+% Add new commands used-defined:
+\newcommand{\m}[1]{\mathbf{#1}}
+
+
+% instälningar för figurtexter
+\usepackage[margin=3ex,font=small,labelfont=bf,labelsep=endash]{caption}
+
+% mailadresser som hyperlänkar
+\newcommand{\mail}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+% Spara författare och titel
+\let\oldAuthor\author
+\renewcommand{\author}[1]{\newcommand{\myAuthor}{#1}\oldAuthor{#1}}
+\let\oldTitle\title
+\renewcommand{\title}[1]{\newcommand{\myTitle}{#1}\oldTitle{#1}}
+
+% Hyperlänkar
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = black, %Colour for external hyperlinks
+  linkcolor    = black, %Colour of internal links
+  citecolor   = black %Colour of citations
+}
+
+
+
+\graphicspath{{./images/}} % Söker också bilder i en undermapp figs.
+
+
+%% DOCUMENT
+%------------------------------------------------------------------%
+\begin{document}
+  \title{Crack Detection using Inductive Methods}
+
+
+  \author{
+    Axel Pandolfi Elmi (\mail{axpa0003@student.umu.se})\\
+    Joar Svartholm (\mail{josv0150@student.umu.se})\\
+    Shuk Wang Chiu (\mail{shwa0007@student.umu.se})
+    }
+
+
+  \date{\today}
+
+
+\begin{titlepage}
+  \maketitle
+  \thispagestyle{fancy}
+  \headheight 35pt
+  \rhead{\small\today}
+  \lhead{\small Department of Physics\\
+    Umeå University}
+
+
+% State the aim of the experiment, what was measured, which techniques and methods were used, and the main result(s) and conclusion(s). Remember that the abstract should be understandable on its own, and you can thereby not refer to equations/figures/tables in the report. You should also not use references, since the information in the abstract should be available in the actual report.
+\vspace{1cm}
+\begin{abstract}
+\noindent
+\input{abstract}
+
+\end{abstract}
+
+  % Ändra till rätt namn m.m.
+  \cfoot{Non-invasive measurement techniques / v1.0\\
+    Supervisor: Piotr Matyba }
+
+\end{titlepage}
+
+
+\newpage
+\pagestyle{fancy}
+\headheight 30pt
+\rhead{\small \myTitle\\\today}
+\lhead{\small \myAuthor}
+\cfoot{\thepage}
+
+% Innehåll
+%\tableofcontents
+
+%\newpage
+\input{introduction}
+
+\input{Theory}
+
+\input{Setup}
+
+\input{Results}
+
+\input{Conclusion}
+
+\input{references}
+%
+% \include{appendix}
+
+
+
+\end{document}
