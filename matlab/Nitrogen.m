@@ -1,3 +1,4 @@
+save=0;
 filename='Nitrogen';
 size =16;
 Troom = 22;
@@ -37,7 +38,9 @@ legend([meas Fit],'Measured values','Linear fit','Location','nw');
 xlabel 'Pressure change [kPa]'
 ylabel 'Number of fringes'
 set(gca,'FontSize',size)
-saveas(fig,filename,'png')
+if save
+    saveas(fig,filename,'png')
+end
 
 alpha = linFit.p1*lambda*Patm/(2*L);
 n = alpha+1;
