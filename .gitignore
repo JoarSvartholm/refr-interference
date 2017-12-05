@@ -2,3 +2,12 @@
 Makefile
 .DS_Store
 *.m~
+*.asv
+*_latexmk
+*.pptx
+*.aux
+*_latexmk
+*.fls
+*.log
+*.out
+*.gz
