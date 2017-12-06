@@ -1,5 +1,7 @@
 \section{Results and discussion}
-The number of fringes was plotted against the pressure change for the different gases and is found in Fig. \ref{fig:measurements}. As one can see in the figures all gases showed a linear relation which was expected. When comparing Fig. \ref{fig:Helium} with the others the number of fringes is a lot lower than for the others. This means that the index of refraction must be a lot lower for this and the relative error will probably be larger. 
+The number of fringes was plotted against the pressure change for the different gases and is found in Fig. \ref{fig:measurements}. As one can see in the figures all gases showed a linear relation which was expected. When comparing Fig. \ref{fig:Helium} with the others the number of fringes is a lot lower than for the others. This means that the index of refraction must be a lot lower for this and the relative error will probably be larger. It also means that the relative error in the result will be quite larger in this result in comparison to the others.
+
+The linear fit parameters are found in Tab. \ref{tab:linearFits}. As expected, the slope $a$ for helium is a lot lower than the other slopes. From these slopes, the refractive indexes was estimated using Eq. \eqref{eq:slope} and tabulated in Tab. \ref{tab:refrIndex}.
 
 \begin{figure}[H]
   \centering
@@ -27,7 +29,7 @@ The number of fringes was plotted against the pressure change for the different 
   \label{fig:measurements}
 \end{figure}
 
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Fitting parameters for the measured values in Fig. \ref{fig:measurements}. Linear fit on the form $y=\alpha x + \beta$.}
   \label{tab:linearFits}
@@ -37,5 +39,18 @@ The number of fringes was plotted against the pressure change for the different 
   Helium & $0.108(1)$ kPa$^{-1}$ & 0.06(5) \\
   Argon  & $0.793(1)$ kPa$^{-1}$ & 0.61(5) \\
   Nitrogen & $0.843(1)$ kPa$^{-1}$ & 0.86(5)
+  \end{tabular}
+\end{table}
+
+\begin{table}
+  \centering
+  \caption{Estimated refractive indexes for the gases including tabulated values}
+  \label{tab:refrIndex}
+  \begin{tabular}{l|l|l|l}
+          & measured & tabulated & error \\ \hline
+    Air     & 1.00026410 & 1.00027116 & 7.05654305e-06 \\
+    Helium  & 1.00003440 & 1.00003233 & 2.07707264e-06 \\
+    Argon   & 1.00025283 & 1.00026106 & 8.23800429e-06 \\
+    Nitrogen& 1.00026891 & 1.00027646 & 7.55338923e-06
   \end{tabular}
 \end{table}
