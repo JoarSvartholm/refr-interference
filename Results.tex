@@ -35,10 +35,10 @@ The linear fit parameters are found in Tab. \ref{tab:linearFits}. As expected, t
   \label{tab:linearFits}
   \begin{tabular}{l|l|l}
            & $\alpha$ [kPa$^{-1}$]& $\beta$ \\ \hline
-  Air      & $0.828(7)$  & $0.16(6)$ \\
-  Helium   & $0.11(4)$ & $0.06(5)$ \\
-  Argon    & $0.793(6)$ & $0.61(5)$ \\
-  Nitrogen & $0.843(6)$ & $0.86(5)$
+  Air      & $0.83(2)$  & $0.16(6)$ \\
+  Helium   & $0.11(1)$ & $0.06(5)$ \\
+  Argon    & $0.79(3)$ & $0.61(5)$ \\
+  Nitrogen & $0.84(2)$ & $0.86(5)$
   \end{tabular}
 \end{table}
 
@@ -48,15 +48,15 @@ The linear fit parameters are found in Tab. \ref{tab:linearFits}. As expected, t
   \label{tab:refrIndex}
   \begin{tabular}{l|l|l}%|l}
           & Calculated & Tabulated  \\ \hline %& Error \\ \hline
-    Air      & $1.000264(11)$%410$
-      & $1.00027116$ \cite{idxAir} \\ %& $7.05654305 \cdot 10^{-6}$ \\
-    Helium   & $1.00003(5)$%440$
-      & $1.00003233$ \cite{idxHeli} \\ %& $2.07707264 \cdot 10^{-6}$ \\
-    Argon    & $1.000253(11)$%283$
-      & $1.00026106$ \cite{idxArg} \\ %& $8.23800429 \cdot 10^{-6}$ \\
-    Nitrogen & $1.000269(10)$%891$
-      & $1.00027646$ \cite{idxNit} \\ %& $7.55338923 \cdot 10^{-6}$
+    Air      & $1.000264(6)$  & $1.000271$ \cite{idxAir} \\ %& $7.05654305 \cdot 10^{-6}$ \\
+    Helium   & $1.000034(4)$  & $1.000032$ \cite{idxHeli} \\ %& $2.07707264 \cdot 10^{-6}$ \\
+    Argon    & $1.000253(9)$  & $1.000261$ \cite{idxArg} \\ %& $8.23800429 \cdot 10^{-6}$ \\
+    Nitrogen & $1.000269(6)$  & $1.000276$ \cite{idxNit} \\ %& $7.55338923 \cdot 10^{-6}$
   \end{tabular}
 \end{table}
 
-All the tabulated values for index of refraction is within the calculated ones error of margin, as seen in Tab. \ref{tab:refrIndex}. The major thing to notice from the results is that the error margin for helium is approximatly five times larger than the errors for the other gases. This is expected, since helium generate only $10$ fringes while the other gases generated about $70-80$ fringes (i.e. alot more).
+As seen in the table the tabulated refractive indexes are inside the error margin for helium and argon and slightly outside for air and nitrogen. Notice that the relative error is wastly larger for helium than for the others since its refractive index is much lower. This is due to that there was a lot fewer data points for this gas, as seen in Fig. \ref{fig:Helium}. Note also that the calculated values are lower that the tabulated values for all gases but helium indicating that there might be a systematic error that is unknown. One reason for this could be that the measurements was not started from perfect vaccum. The pump that was used to generate vaccum only achieved about 0.2-0.4kPa of pressure which intruduces a shift of the measurements. Since the refractive index at this pressure is still approximatly one in Eq. \ref{eq:refrInd}, only the right hand side would shift which would introduce a slightly higher slope. Then question then would be why the refracted index of helium was higher. This could be due to that the lack of measurements overtake this error in the opposite direction.
+
+%All the tabulated values for index of refraction is within the calculated ones error of margin, as seen in Tab. \ref{tab:refrIndex}. The major thing to notice from the results is that the error margin for helium is approximatly five times larger than the errors for the other gases. This is expected, since helium generated only $10$ fringes while the other gases generated about $70-80$ fringes (i.e. alot more).
+
+

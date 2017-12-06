@@ -5,7 +5,7 @@ SP = 0.1;
 lambda = 633e-9; %error 
 Slambda = 0.5e-9;
 % Error in number of fringes
-SN = 0.2;
+SN = 0.5;
 
 
 save=0;
@@ -62,12 +62,23 @@ n = alpha+1;
 %slopeError = sqrt( (SP/(P(I(end))-P(I(1))))^2 + (0.5/length(I))^2);
 slopeError = mean(sqrt( (SP./dP(2:end)).^2 + (SN./dN(2:end)').^2));
 
-R = [slopeError/linFit.p1 ; Slambda/lambda ; SP/Patm ; SL/L];
+maxP = [0+SP, dP(end)-SP]; 
+maxN = [0-SN, dN(end)+SN];
+maxSlope = (maxN(2)-maxN(1))/(maxP(2)-maxP(1));
+maxSlope = maxSlope - linFit.p1;
+
+minP = [0-SP, dP(end)+SP];
+minN = [0+SN, dN(end)-SN];
+minSlope = (minN(2)-minN(1))/(minP(2)-minP(1));
+minSlope = linFit.p1 - minSlope;
+
+
+R = [max([minSlope,maxSlope])/linFit.p1 ; Slambda/lambda ; SP/Patm ; SL/L];
 nError = sqrt(R'*R)*(n-1);
 
 if display
-    disp(['Slope: ' num2str(linFit.p1)])
-    disp(['Slope error: ' num2str(slopeError)])
+    disp(['Slope: ' num2str(linFit.p1) '(' num2str(minSlope) ',' num2str(maxSlope) ')'])
+  %  disp(['Slope error: ' num2str(slopeError)])
     disp(['Estimated refractive index: ' num2str(n,'%1.8f') ' +- ' ...
         num2str(nError,'%1.4e')])
     disp(['Tabulated value at ' num2str(Troom) ': ' num2str(ntab,'%1.8f')])
