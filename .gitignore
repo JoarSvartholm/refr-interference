@@ -12,3 +12,4 @@ Makefile
 *.out
 *.gz
 *.dvi
+*.pdf
