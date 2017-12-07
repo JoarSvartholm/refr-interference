@@ -1,6 +1,6 @@
 save=0;
 display=1;
-fig='off';
+fig='on';
 filename='Nitrogen';
 size =16;
 Troom = 22;

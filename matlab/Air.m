@@ -8,7 +8,7 @@ Slambda = 0.5e-9;
 SN = 0.5;
 
 
-save=0;
+save=1;
 display=1;
 fig='off';
 filename='Air';
@@ -53,6 +53,7 @@ legend([meas Fit],'Measured values','Linear fit','Location','nw');
 xlabel 'Pressure change [kPa]'
 ylabel 'Number of fringes'
 set(gca,'FontSize',size)
+pause(0.01)
 if save
     saveas(fig,filename,'png')
 end

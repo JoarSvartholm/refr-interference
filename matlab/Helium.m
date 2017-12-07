@@ -1,6 +1,6 @@
 save=0;
 display=1;
-fig='off';
+fig='on';
 filename='Helium';
 size =16;
 
