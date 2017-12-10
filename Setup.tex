@@ -13,14 +13,14 @@ The experimental setup used to measure the index of refraction for various gases
 
 The photodiode is connected to an operational amplifier with a low pass filter with a cut off frequency of 35Hz in order to amplify the signal and reduce noise in the circut. The data acquisition card (DAQ) retrives the amplified signal from the photodiode and a signal from a pressure sensor in the gas chamber.
 
-The pressure signal was calibrated using a pressure gauge and the calibration curve is shown in Fig. \ref{fig:calibration}. A linear fit was done and the fitting parameters are found in Table \ref{tab:calibration}
+The pressure signal was calibrated using a pressure gauge and the calibration curve is shown in Fig. \ref{fig:calibration}. A linear fit was done and the fitting parameters are found in Tab. \ref{tab:calibration}.
 %The linear fit on the calibration measurement was calculated in by linear least squares in MATLAB, the fitted line has the equation $P = 12.5(2)V+25.6(1)$.
 
 \begin{table}[H]
 \centering
-  \caption{Linear fit parameters $P = p_1 V + p_2$, for calibration of the pressure measurments.}
+  \caption{Linear fit parameters $P = p_1 V + p_2$, for calibration of the pressure sensor.}
   \label{tab:calibration}
-  \begin{tabular}{c|cc}
+  \begin{tabular}{c|c|c}
     & $p_1$ & $p_2$ \\ \hline
     Pressure calibration & $12.5(2)$ kPa/V & $25.6(1)$ kPa
   \end{tabular}
@@ -29,7 +29,7 @@ The pressure signal was calibrated using a pressure gauge and the calibration cu
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{matlab/calibration.png}
-  \caption{Calibration curve for voltage to pressure relation. The linear fit parameters are found in Table \ref{tab:calibration}}
+  \caption{Calibration curve for voltage to pressure relation. The linear fit parameters are found in Tab. \ref{tab:calibration}.}
   \label{fig:calibration}
 \end{figure}
 
