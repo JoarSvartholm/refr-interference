@@ -13,14 +13,23 @@ The experimental setup used to measure the index of refraction for various gases
 
 The photodiode is connected to an operational amplifier with a low pass filter with a cut off frequency of 35Hz in order to amplify the signal and reduce noise in the circut. The data acquisition card (DAQ) retrives the amplified signal from the photodiode and a signal from a pressure sensor in the gas chamber.
 
-The pressure signal was calibrated using a pressure gauge and the calibration curve is shown in Fig. \ref{fig:calibration}. A linear fit was done and the equation was found as $P = 12.5(2)V+25.6(1)$
+The pressure signal was calibrated using a pressure gauge and the calibration curve is shown in Fig. \ref{fig:calibration}. A linear fit was done and the fitting parameters are found in Table \ref{tab:calibration}
 %The linear fit on the calibration measurement was calculated in by linear least squares in MATLAB, the fitted line has the equation $P = 12.5(2)V+25.6(1)$.
 
+\begin{table}[H]
+\centering
+  \caption{Linear fit parameters $P = p_1 V + p_2$, for calibration of the pressure measurments.}
+  \label{tab:calibration}
+  \begin{tabular}{c|cc}
+    & $p_1$ & $p_2$ \\ \hline
+    Pressure calibration & $12.5(2)$ kPa/V & $25.6(1)$ kPa
+  \end{tabular}
+\end{table}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{matlab/calibration.png}
-  \caption{Calibration curve for voltage to pressure relation. The linear fit is $P = 12.5(2)V+25.6(1)$.}
+  \caption{Calibration curve for voltage to pressure relation. The linear fit parameters are found in Table \ref{tab:calibration}}
   \label{fig:calibration}
 \end{figure}
 
@@ -30,4 +39,4 @@ The two legs were aligned properly in order to see a interference pattern at the
 
 
 
-In order to estimate the error of $a =\Delta N/ \Delta P$ from Eq. \ref{eq:slope}, the errors of $\Delta N$ and $\Delta P$ was estimated to $S_{\Delta N}=0.5$ and $S_{\Delta P}=0.1$ kPa. By fitting two lines that are inside these errors for all measurements, with as large slope and small slope as possible. These slopes extream slopes will be used as the upper and lower limits on $a$.
+In order to estimate the error of $a =\Delta N/ \Delta P$ from Eq. \ref{eq:slope}, the errors of $\Delta N$ and $\Delta P$ was estimated to $S_{\Delta N}=0.5$ and $S_{\Delta P}=0.1$ kPa. By fitting two lines that are inside these errors for all measurements, with as large slope/small slope as possible. These slopes will serve as the error estimates of $a$.
